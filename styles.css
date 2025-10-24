@@ -4,6 +4,29 @@
   box-sizing: border-box;
 }
 
+#heroSection {
+  background-attachment: fixed;
+  background-position: center;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), /* darker overlay */
+    url('images/image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay; /* optional */
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When the element becomes visible */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 html {
   scroll-behavior: smooth;
 }
